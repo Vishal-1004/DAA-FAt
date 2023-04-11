@@ -5,3 +5,31 @@ https://chrome.google.com/webstore/detail/dont-f-with-paste/nkgllhigpcljnhoakjkg
 
 Question here!
 
+Eliminate Common Previous Difference
+A function prev_Difference is defined as follows:
+
+prev_Difference(n, i) = ith digit of n - (i-1)th digit of n
+
+all_prev_Difference is a function which takes a number n as input and find all possible, prev_Difference of n that is for values of i = 2 to len(n). 
+if n1 is 378219 and n2 is 480107,
+all_Prev_Difference(n1) = 4, 1, -6, -1, 8  
+all_Prev_Difference(n2) = 4, -8, 1, -1, 7 
+
+common_Prev_Diff_In_Order(n1, n2) - Previous differences of maximum length common in both n1 and n2 and in same order (i.e.) the elements in common_Prev_Diff_In_Order(n1, n2) is obtained by deleting elements  in all_Prev_Difference(n1) that are not present in all_Prev_Difference(n2) and order of no element in all_Prev_Difference is changed
+
+For the above example, common_Prev_Diff_In_Order(n1, n2) = 4, 1, -1
+
+remove_common_differences(n1, n2) - remove all ith digit from n1 if prev_Difference(n, i) is in common_Prev_Diff_In_Order(n1, n2), for the example given remove_common_differences(n1, n2) will be 329
+
+Given two numbers n1 and n2 write a C++ program to find remove_common_differences(n1, n2).
+Boundary conditions
+0 <= num1 <=1020
+0 <= num2 <=1020
+Note: No two previous differences will be same in either num1 or num2
+
+Input Format
+First line contains the number, num1
+Next line contains the number, num2
+
+Output Format
+Print the number obtained after remove_common_differences
